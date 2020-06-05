@@ -35,7 +35,7 @@ void scan_dir(const boost::filesystem::path &path,
                     dir.push(curr_path);
                     dir_callback(curr_path);
                 }
-                if (fs::is_regular_file(curr_path))
+                else if (fs::is_regular_file(curr_path))
                 {
                     file_callback(curr_path);
                 }
